@@ -23,12 +23,15 @@ export default function Home() {
   }, [light]);
 
   return (
+    <div>
+      <h1 className="flex justify-center mt-10 text-4xl font-semibold">Traffic Signal</h1>
     <div style={styles.container}>
       <div style={styles.trafficLight}>
         <div style={{ ...styles.light, backgroundColor: light === "red" ? "red" : "grey" }} />
         <div style={{ ...styles.light, backgroundColor: light === "yellow" ? "yellow" : "grey" }} />
         <div style={{ ...styles.light, backgroundColor: light === "green" ? "green" : "grey" }} />
       </div>
+    </div>
     </div>
   );
 }
@@ -40,12 +43,12 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "white",
   },
   trafficLight: {
     width: "100px",
-    backgroundColor: "#333",
-    padding: "20px",
+    backgroundColor: "black",
+    padding: "25px",
     borderRadius: "20px",
     display: "flex",
     flexDirection: "column",
